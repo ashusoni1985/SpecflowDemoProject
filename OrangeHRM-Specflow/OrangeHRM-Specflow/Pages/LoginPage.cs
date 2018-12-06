@@ -24,6 +24,8 @@ namespace OrangeHRM_Specflow.Pages
         private IWebElement btnLogIn { get; set; }
         [FindsBy(How =How.Id, Using = "spanMessage")]
         private IWebElement lblMessage { get; set; }
+        [FindsBy(How = How.Id, Using = "logInPanelHeading")]
+        private IWebElement lblLoginPanel { get; set; }
 
         public void EnterUserName(string userName)
         {
@@ -64,8 +66,32 @@ namespace OrangeHRM_Specflow.Pages
             }
         }
 
+        public bool verifyLoginPage(string labelMessage)
+        {
+            if(lblLoginPanel.Displayed && lblLoginPanel.Text.Equals(labelMessage))
+            {
+                Console.WriteLine("Label matched. User is at Kogin page");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Label doesn't matched. User is not at Login Page");
+                return false;
+            }
+        }
 
-
-
+        public bool VerifyPageLod()
+        {
+            if (lblLoginPanel.Displayed)
+            {
+                Console.WriteLine("Login page load successfully.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Login page doesn't load successfully.");
+                return false;
+            }
+        }
     }
 }

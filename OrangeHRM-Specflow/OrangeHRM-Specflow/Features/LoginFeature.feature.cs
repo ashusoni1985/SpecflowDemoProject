@@ -85,10 +85,8 @@ testRunner.Given("I am at login page", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 9
 testRunner.And("Page load successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-testRunner.When("I enter invalid user name and password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter invalid user name and password And Click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-testRunner.And("Click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
 testRunner.Then("Application shouuld display an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -99,18 +97,16 @@ testRunner.Then("Application shouuld display an error message", ((string)(null))
         public virtual void ValidateTheLoginFunctionalityWhenUserEnterValidCredentials()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the Login functionality when user enter valid credentials", null, ((string[])(null)));
-#line 15
+#line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 16
+#line 15
 testRunner.Given("I am at login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 17
+#line 16
 testRunner.And("Page load successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+testRunner.When("I enter valid user name and password And Click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
-testRunner.When("I enter valid user name and password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
-testRunner.And("Click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
 testRunner.Then("user must navigate to Dashboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -123,18 +119,18 @@ testRunner.Then("user must navigate to Dashboard", ((string)(null)), ((TechTalk.
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate the Login functionality when user enter valid User name and invalid pass" +
                     "word", null, ((string[])(null)));
-#line 25
+#line 23
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 26
+#line 24
 testRunner.Given("I am at login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 27
+#line 25
 testRunner.And("Page load successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 26
 testRunner.When("I enter valid valid user name and invalid password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 27
 testRunner.And("Click on Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 28
 testRunner.Then("Application shouuld display an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
